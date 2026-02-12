@@ -12,7 +12,7 @@ export default function AudioPlayer({ mobileContent }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
-    <div className="bg-[#dacfc1c0] py-8  sm:px-4 lg:px-10 w-full sm:w-[420px] md:w-[490px] lg:w-[490px] xl:w-[690px] 2xl:w-[700px] mx-auto rounded-2xl">
+    <div className="bg-[#dacfc1c0] py-20  sm:px-4 lg:px-10 w-full sm:w-[420px] md:w-[490px] lg:w-[490px] xl:w-[690px] 2xl:w-[700px] mx-auto rounded-2xl">
       {/* Texte desktop */}
       <div className="text-center space-y-2 mb-8 hidden sm:block">
         <p className="text-sm text-[#533b2a]/50">
