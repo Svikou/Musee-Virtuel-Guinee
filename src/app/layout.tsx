@@ -1,16 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Header2 from "../components/Header";
 import Navigation from "../components/Navigation";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
   subsets: ["latin"],
 });
 
@@ -27,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased relative min-h-screen  `}
+        className={`${inter.className} antialiased relative min-h-screen  `}
       >
         <div className="px-8 md:px-16 lg:px-16">
           {/* Background Image */}
@@ -45,7 +39,7 @@ export default function RootLayout({
             {/* Header */}
             <Header2 />
 
-            <div className="px-8 py-2 flex items-center gap-2 text-white/80 text-sm mt-6">
+            <div className=" py-2 flex items-center gap-2 text-white/80 text-sm mt-6">
               <Navigation />
             </div>
 

@@ -32,7 +32,7 @@ const Header = () => {
 
   return (
     <div className="relative">
-      <header className="flex items-center justify-between px-4 md:px-8 py-4 border-b border-gray-300/30">
+      <header className="flex items-center justify-between py-4 border-b border-gray-300/30">
         {/* Logo */}
         <Link href="/">
           <h1 className="text-xl md:text-2xl text-white font-serif italic cursor-pointer">
@@ -74,13 +74,13 @@ const Header = () => {
             <DropdownMenuContent className="bg-[#4e3b2d] border-[#6b4f3d] text-white min-w-[120px] ">
               <DropdownMenuItem
                 onClick={() => setLanguage("Français")}
-                className="text-white hover:bg-[#6b4f3d] focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
+                className="text-white hover:bg-white  focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
               >
                 Français
               </DropdownMenuItem>
               <DropdownMenuItem
                 onClick={() => setLanguage("English")}
-                className="text-white hover:bg-[#6b4f3d] focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
+                className="text-white hover:bg-white focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
               >
                 English
               </DropdownMenuItem>
@@ -90,7 +90,7 @@ const Header = () => {
 
         {/* Hamburger Menu - Mobile only */}
         <DropdownMenu>
-          <DropdownMenuTrigger className="lg:hidden text-white p-2 hover:opacity-80 transition focus:outline-none cursor-pointer">
+          <DropdownMenuTrigger className="lg:hidden text-white hover:opacity-80 transition focus:outline-none cursor-pointer">
             <Menu size={24} />
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -101,7 +101,7 @@ const Header = () => {
               <DropdownMenuItem
                 key={item.href}
                 asChild
-                className={`text-white hover:bg-[#6b4f3d] focus:bg-[#6b4f3d] focus:text-white cursor-pointer ${
+                className={`text-white hover:bg-[#ffffff] focus:bg-[#6b4f3d] focus:text-white cursor-pointer ${
                   isActive(item.href) ? "bg-[#6b4f3d]" : ""
                 }`}
               >
