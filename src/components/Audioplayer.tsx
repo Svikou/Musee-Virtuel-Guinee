@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Rewind, Play, Pause, FastForward, Volume2 } from "lucide-react";
 import ProfilesMobile from "./ProfilesMobile";
+import { Separator } from "./ui/separator";
 
 interface AudioPlayerProps {
   mobileContent?: React.ReactNode;
@@ -37,6 +38,10 @@ export default function AudioPlayer({ mobileContent }: AudioPlayerProps) {
       <div className="mb-8 sm:hidden">
         {mobileContent}
         <ProfilesMobile />
+      </div>
+
+      <div>
+        <Separator className="bg-[#785E471A]/70 mb-6" />
       </div>
 
       {/* Audio Player - Version Desktop */}

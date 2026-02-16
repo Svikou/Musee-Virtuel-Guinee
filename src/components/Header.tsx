@@ -1,9 +1,10 @@
 "use client";
 
-import { Search, ChevronDown, Menu } from "lucide-react";
+import { Search, ChevronDown } from "lucide-react";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,6 +15,15 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
 } from "./ui/dropdown-menu";
+
+const Menu = ({ size = 24 }) => (
+  <Image
+    src="/icones/menu-left-alt.svg"
+    alt="menu"
+    width={size}
+    height={size}
+  />
+);
 
 const Header = () => {
   const [language, setLanguage] = useState("Français");

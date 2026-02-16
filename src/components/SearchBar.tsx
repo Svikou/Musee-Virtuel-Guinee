@@ -280,7 +280,7 @@ export default function CatalogueHeader() {
             >
               <SelectTrigger
                 id="desktop-category"
-                className="w-full bg-[#503D2E4D]/10 backdrop-blur-sm border-none text-white py-6 rounded-lg h-14 [&>svg]:text-red-500"
+                className="w-full bg-[#503D2E4D]/10 backdrop-blur-sm border-none text-white py-6 rounded-lg h-14 [&>svg]:text-white"
               >
                 <SelectValue />
               </SelectTrigger>

@@ -1,6 +1,6 @@
-import SearchBar from "@/src/components/SearchBar";
+import SearchBar from "@/components/SearchBar";
 import { Separator } from "@/components/ui/separator";
-import ProductGrid from "@/src/components/ProductGrid";
+import ProductGrid from "@/components/ProductGrid";
 
 const page = () => {
   return (
