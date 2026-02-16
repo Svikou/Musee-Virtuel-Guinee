@@ -1,10 +1,35 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import Info from "../components/Info";
 import Tabs from "../components/Tabs";
 import SliderProfiles from "../components/SliderProfiles";
 import AudioPlayer from "../components/Audioplayer";
+import GalerieImages from "../components/GalerieImages";
+import VideoPlayer from "../components/VideoPlayer";
+import MapComponent from "../components/MapComponent";
 
 export default function Home() {
+  // État pour gérer la tab active
+  const [activeTab, setActiveTab] = useState("recits");
+
+  // Fonction pour rendre le contenu selon la tab active
+  const renderContent = () => {
+    switch (activeTab) {
+      case "images":
+        return <GalerieImages />;
+      case "recits":
+        return <AudioPlayer />;
+      case "videos":
+        return <VideoPlayer />;
+      case "carte":
+        return <MapComponent />;
+      default:
+        return <AudioPlayer />;
+    }
+  };
+
   return (
     <div className="relative">
       <div className="absolute inset-0" />
@@ -16,7 +41,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-10 sm:gap-8 md:gap-6 lg:gap-10 xl:gap-6 2xl:gap-8">
             {/* Tabs - 1ère position sur mobile */}
             <div className="md:hidden w-full">
-              <Tabs />
+              <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
             </div>
 
             {/* Left side */}
@@ -28,16 +53,18 @@ export default function Home() {
             <div className="flex-1 w-full">
               {/* Tabs - Position normale sur desktop */}
               <div className="hidden md:block">
-                <Tabs />
+                <Tabs activeTab={activeTab} onTabChange={setActiveTab} />
               </div>
 
-              {/* Transcript Text */}
-              <AudioPlayer />
+              {/* Contenu dynamique selon la tab active */}
+              {renderContent()}
 
               {/* SliderProfiles - Desktop seulement */}
-              <div className="-mt-10 hidden md:block">
-                <SliderProfiles />
-              </div>
+              {activeTab === "recits" && (
+                <div className="-mt-10 hidden md:block">
+                  <SliderProfiles />
+                </div>
+              )}
             </div>
           </div>
         </main>

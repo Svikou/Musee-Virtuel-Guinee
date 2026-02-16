@@ -1,20 +1,17 @@
 "use client";
-import { useState } from "react";
 import { Headphones, Image, Video, Map } from "lucide-react";
-import Link from "next/link";
 
-const Tabs = () => {
-  const [activeTab, setActiveTab] = useState("recits");
+interface TabsProps {
+  activeTab: string;
+  onTabChange: (tabId: string) => void;
+}
+
+const Tabs = ({ activeTab, onTabChange }: TabsProps) => {
   const tabs = [
-    { id: "images", label: "Images", href: "/", icon: Image },
-    {
-      id: "recits",
-      label: "Récits sonores",
-      href: "/",
-      icon: Headphones,
-    },
-    { id: "videos", label: "Vidéos", href: "/", icon: Video },
-    { id: "carte", label: "Carte", href: "/", icon: Map },
+    { id: "images", label: "Images", icon: Image },
+    { id: "recits", label: "Récits sonores", icon: Headphones },
+    { id: "videos", label: "Vidéos", icon: Video },
+    { id: "carte", label: "Carte", icon: Map },
   ];
 
   return (
@@ -22,10 +19,9 @@ const Tabs = () => {
       {tabs.map((tab) => {
         const Icon = tab.icon;
         return (
-          <Link
+          <button
             key={tab.id}
-            href={tab.href}
-            onClick={() => setActiveTab(tab.id)}
+            onClick={() => onTabChange(tab.id)}
             className={`
               px-3 py-2
               sm:px-4 sm:py-2.5
@@ -36,7 +32,7 @@ const Tabs = () => {
               text-xs 
               sm:text-sm 
               md:text-sm  
-              lg:text-base 
+              lg:text-md 
               xl:text-base
               flex items-center 
               gap-1.5 
@@ -56,7 +52,7 @@ const Tabs = () => {
               <Icon className="w-3 h-3 sm:w-4 sm:h-4 md:w-4 md:h-4 lg:w-5 lg:h-5 xl:w-5 xl:h-5" />
             )}
             {tab.label}
-          </Link>
+          </button>
         );
       })}
     </div>
