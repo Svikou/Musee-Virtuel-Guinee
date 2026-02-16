@@ -47,13 +47,13 @@ const Tabs = ({ activeTab, onTabChange }: TabsProps) => {
     md:px-4 md:py-2
     lg:px-5 lg:py-3
     xl:px-5 xl:py-3
-    rounded-full 
-    text-xs 
-    sm:text-sm 
-    md:text-sm  
-    lg:text-sm 
-    xl:text-md
-    flex items-center 
+    rounded-full
+    text-xs
+    sm:text-md
+    md:text-sm
+    lg:text-sm
+    xl:text-sm
+    flex items-center
     gap-1.5 
     sm:gap-2 
     md:gap-2 
