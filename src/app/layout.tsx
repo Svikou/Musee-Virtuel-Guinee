@@ -28,7 +28,7 @@ export default function RootLayout({
           <div
             className="fixed inset-0 bg-repeat-y bg-top "
             style={{
-              backgroundImage: `url('/BG.jpg')`,
+              backgroundImage: `url('/BG_1.png')`,
               backgroundSize: "100% auto",
             }}
           />

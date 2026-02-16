@@ -59,7 +59,9 @@ const Header = () => {
             className="text-white p-2 hover:opacity-80 transition"
             aria-label="Rechercher"
           >
-            <Search size={20} />
+            <Link href="/">
+              <Search size={20} />
+            </Link>
           </button>
         </nav>
 
