@@ -10,7 +10,7 @@ import VideoPlayer from "../components/VideoPlayer";
 import MapComponent from "../components/MapComponent";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState("recits");
+  const [activeTab, setActiveTab] = useState("images");
 
   const renderContent = () => {
     switch (activeTab) {
