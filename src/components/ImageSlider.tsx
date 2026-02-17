@@ -54,7 +54,7 @@ export default function ImageSlider() {
 
   return (
     <div className="flex flex-col items-center w-full py-1 font-serif">
-      {/* ── MOBILE: single image + flanking arrows ── */}
+      {/* Mobile Version */}
       <div className="flex sm:hidden w-full items-center justify-center px-4">
         <button
           onClick={prev}
@@ -88,7 +88,7 @@ export default function ImageSlider() {
         </button>
       </div>
 
-      {/* ── DESKTOP: 3-image layout ── */}
+      {/* Desktop */}
       <div className="hidden sm:flex relative w-full max-w-[760px] h-[300px] lg:h-[340px] xl:h-[380px] items-center justify-center">
         <button
           onClick={prev}
@@ -105,7 +105,7 @@ export default function ImageSlider() {
             transform: animating ? "scale(0.97)" : "scale(1)",
           }}
         >
-          {/* Left side image — 75% of center */}
+          {/* Left side  */}
           <div className="absolute top-1/2 -translate-y-1/2 z-[1] left-[10%] lg:left-[11%] xl:left-[12%]">
             <img
               src={leftSlide.src}
@@ -115,7 +115,7 @@ export default function ImageSlider() {
             />
           </div>
 
-          {/* Center main image */}
+          {/* Center */}
           <div className="z-2 flex items-center justify-center">
             <img
               src={centerSlide.src}
@@ -125,7 +125,7 @@ export default function ImageSlider() {
             />
           </div>
 
-          {/* Right side image — 75% of center */}
+          {/* Right side */}
           <div className="absolute top-1/2 -translate-y-1/2 z-1 right-[10%] lg:right-[11%] xl:right-[12%]">
             <img
               src={rightSlide.src}
@@ -145,7 +145,7 @@ export default function ImageSlider() {
         </button>
       </div>
 
-      {/* Text below — shared */}
+      {/* Description */}
       <div
         className="text-center  transition-opacity duration-300"
         style={{ opacity: animating ? 0 : 1 }}

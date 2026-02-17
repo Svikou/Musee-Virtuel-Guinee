@@ -2,7 +2,6 @@
 
 import ProductCard from "./ProductCard";
 
-// Interface pour le type Product
 export interface Product {
   id: string;
   title: string;
@@ -19,7 +18,6 @@ interface ProductGridProps {
   products?: Product[];
 }
 
-// Données temporaires (à remplacer par DB plus tard)
 const MOCK_PRODUCTS: Product[] = [
   {
     id: "1",
@@ -76,7 +74,7 @@ export default function ProductGrid({
 }: ProductGridProps) {
   return (
     <div className="w-full  py-8">
-      {/* Grid Container - Largeurs fixes des cards, gap flexible */}
+      {/* Grid Container */}
       <div className="flex flex-wrap gap-4 md:gap-10 lg:gap-4 xl:gap-4 justify-start">
         {products.map((product) => (
           <ProductCard
@@ -90,7 +88,7 @@ export default function ProductGrid({
         ))}
       </div>
 
-      {/* Empty State (si aucun produit) */}
+      {/* Empty State  */}
       {products.length === 0 && (
         <div className="text-center py-16">
           <p className="text-white/60 text-lg">Aucun produit trouvé</p>

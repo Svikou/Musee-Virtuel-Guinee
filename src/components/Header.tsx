@@ -75,7 +75,7 @@ const Header = () => {
           </button>
         </nav>
 
-        {/* Right Section - Desktop */}
+        {/* Right Side - Desktop */}
         <div className="hidden lg:flex items-center gap-4">
           {/* Language Selector */}
           <DropdownMenu>
@@ -100,7 +100,7 @@ const Header = () => {
           </DropdownMenu>
         </div>
 
-        {/* Hamburger Menu - Mobile only */}
+        {/* Menu - Mobile */}
         <DropdownMenu>
           <DropdownMenuTrigger className="lg:hidden text-white hover:opacity-80 transition focus:outline-none cursor-pointer">
             <Menu size={24} />

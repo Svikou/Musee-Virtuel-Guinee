@@ -88,7 +88,7 @@ export default function SliderVideos() {
               <div className="h-full rounded-sm overflow-hidden shrink-0">
                 <img
                   src={profile.image || "/placeholder.svg"}
-                  alt={profile.name}
+                  // alt={profile.name}
                   draggable={false}
                   className="w-full h-full object-cover"
                 />

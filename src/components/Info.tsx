@@ -8,7 +8,7 @@ export default function Info() {
   return (
     <div className="backdrop-blur-lg bg-[503D2E4D]/30 rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 w-full sm:w-[280px] md:w-[240px] lg:w-[290px] xl:w-[300px] 2xl:w-[320px] mx-auto border-2 border-white/30">
       <div className=" shrink-0">
-        {/* Speaker Image */}
+        {/* Speaker Img */}
         <div className="w-28 h-28 rounded-2xl overflow-hidden mb-6 border-2 border-white/30 hidden md:block">
           <img
             src="/img-cover.jpg"
@@ -17,12 +17,10 @@ export default function Info() {
           />
         </div>
 
-        {/* Title */}
         <h2 className="text-2xl font-semibold text-white mb-4">
           Ensiv polyvision
         </h2>
 
-        {/* Description  */}
         <div className="space-y-4 text-sm text-white leading-relaxed">
           <p>
             Transfaktisk radiostik. Parapod etnofili, biosion för att förväntis.

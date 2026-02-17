@@ -15,7 +15,7 @@ const Navigation = () => {
   const pathname = usePathname();
   const segments = pathname.split("/").filter(Boolean);
 
-  // Fonction pour formatter les labels (première lettre en majuscule)
+  // Uppercase Fonction
   const formatLabel = (segment: string) => {
     return segment.charAt(0).toUpperCase() + segment.slice(1);
   };

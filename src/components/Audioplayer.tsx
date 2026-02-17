@@ -37,7 +37,7 @@ export default function AudioPlayer({ mobileContent }: AudioPlayerProps) {
           <p className="text-sm text-[#533b2a]/50">Agnostision elektrotopi</p>
         </div>
 
-        {/* VERSION MOBILE*/}
+        {/* Mobile Version */}
         <div className="mb-8 sm:hidden">
           {mobileContent}
           <ProfilesMobile />
@@ -47,7 +47,7 @@ export default function AudioPlayer({ mobileContent }: AudioPlayerProps) {
           <Separator className="bg-[#785E471A]/70 mb-6" />
         </div>
 
-        {/* Audio Player - Version Desktop */}
+        {/* Audio Player - Desktop */}
         <div className="hidden sm:flex items-center justify-center gap-4 mb-4">
           <button className="w-8 h-8 rounded-full bg-[#785E4766] flex items-center justify-center text-white">
             <Rewind size={16} />
@@ -73,7 +73,7 @@ export default function AudioPlayer({ mobileContent }: AudioPlayerProps) {
             {isPlaying ? <Pause size={22} /> : <Play size={22} />}
           </button>
 
-          {/* Waveform continued */}
+          {/* Waveform 2nd */}
           <div className="flex items-center gap-0.5">
             {Array.from({ length: 20 }).map((_, i) => (
               <div
@@ -89,7 +89,7 @@ export default function AudioPlayer({ mobileContent }: AudioPlayerProps) {
           </button>
         </div>
 
-        {/* Audio Player - Version Mobile */}
+        {/* Audio Player -  Mobile */}
         <div className="flex sm:hidden flex-col gap-6">
           {/* Contrôles audio mobile */}
           <div className="flex items-center justify-center gap-2 h-[20px] ">
@@ -97,7 +97,7 @@ export default function AudioPlayer({ mobileContent }: AudioPlayerProps) {
               <Rewind size={12} />
             </button>
 
-            {/* Waveform mobile - réduit */}
+            {/* Waveform mobile */}
             <div className="flex items-center gap-1">
               {Array.from({ length: 4 }).map((_, i) => (
                 <div
@@ -117,7 +117,7 @@ export default function AudioPlayer({ mobileContent }: AudioPlayerProps) {
               {isPlaying ? <Pause size={24} /> : <Play size={24} />}
             </button>
 
-            {/* Waveform mobile continued */}
+            {/* Waveform mobile 2nd */}
             <div className="flex items-center gap-1">
               {Array.from({ length: 4 }).map((_, i) => (
                 <div
@@ -143,7 +143,7 @@ export default function AudioPlayer({ mobileContent }: AudioPlayerProps) {
           </div>
         </div>
 
-        {/* Time - Version Desktop */}
+        {/* Time - Desktop */}
         <div className="hidden sm:flex items-center justify-between px-12 text-sm text-white mb-8">
           <span>24:32</span>
           <div className="flex items-center gap-2">

@@ -24,7 +24,7 @@ export default function RootLayout({
         className={`${inter.className} antialiased relative min-h-screen  `}
       >
         <div className="px-8 md:px-16 lg:px-16">
-          {/* Background Image */}
+          {/* BG Img */}
           <div
             className="fixed inset-0 bg-repeat-y bg-top "
             style={{

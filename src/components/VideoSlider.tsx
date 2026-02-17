@@ -8,14 +8,14 @@ const slides = [
     id: 1,
     title: "",
     subtitle: "",
-    src: "/Artitees1.png",
+    src: "/Artistees1.png",
     alt: "",
   },
   {
     id: 2,
     title: "",
     subtitle: "",
-    src: "/Artitees1.png",
+    src: "/Artistees1.png",
     alt: "",
   },
   {
@@ -56,17 +56,17 @@ export default function VideoSlider() {
 
   return (
     <div className="flex flex-col items-center w-full py-1 font-serif">
-      {/* ── MOBILE: single image + flanking arrows ── */}
+      {/*  Mobile Version */}
       <div className="flex sm:hidden w-full items-center justify-center px-4">
         <button
           onClick={prev}
           aria-label="Previous"
-          className="flex-shrink-0 w-10 h-10 rounded-full bg-[#785E4766]/60  flex items-center justify-center backdrop-blur-sm transition-all duration-100 hover:bg-[#3a2e26]/90 hover:scale-100 mr-4"
+          className="shrink-0 w-10 h-10 rounded-full bg-[#785E4766]/60  flex items-center justify-center backdrop-blur-sm transition-all duration-100 hover:bg-[#3a2e26]/90 hover:scale-100 mr-4"
         >
           <ChevronLeft size={20} className="text-white" />
         </button>
 
-        {/* Mobile center — image + play button overlay */}
+        {/* center image + play button  */}
         <div
           className="relative flex-1 flex items-center justify-center transition-all duration-300 ease-in-out"
           style={{
@@ -77,13 +77,13 @@ export default function VideoSlider() {
           <img
             src={centerSlide.src}
             alt={centerSlide.alt}
-            className="w-full max-w-[280px] rounded-sm object-contain"
+            className="w-full max-w-70 rounded-sm object-contain"
             style={{ filter: "drop-shadow(0 12px 32px rgba(0,0,0,0.22))" }}
           />
           <button
             onClick={() => setIsPlaying(!isPlaying)}
             aria-label={isPlaying ? "Pause" : "Play"}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[3] w-12 h-12 rounded-full bg-[#3a2e26]/70 flex items-center justify-center text-white backdrop-blur-sm transition-all duration-200 hover:bg-[#3a2e26]/90 hover:scale-105"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-3 w-12 h-12 rounded-full bg-[#3a2e26]/70 flex items-center justify-center text-white backdrop-blur-sm transition-all duration-200 hover:bg-[#3a2e26]/90 hover:scale-105"
           >
             {isPlaying ? <Pause size={20} /> : <Play size={20} />}
           </button>
@@ -92,13 +92,13 @@ export default function VideoSlider() {
         <button
           onClick={next}
           aria-label="Next"
-          className="flex-shrink-0 w-10 h-10 rounded-full bg-[#785E4766]/60 flex items-center justify-center backdrop-blur-sm transition-all duration-100 hover:bg-[#3a2e26]/90 hover:scale-100 ml-4"
+          className="shrink-0 w-10 h-10 rounded-full bg-[#785E4766]/60 flex items-center justify-center backdrop-blur-sm transition-all duration-100 hover:bg-[#3a2e26]/90 hover:scale-100 ml-4"
         >
           <ChevronRight size={20} className="text-white" />
         </button>
       </div>
 
-      {/* ── DESKTOP: 3-image layout ── */}
+      {/* Desktop */}
       <div className="hidden sm:flex relative w-full max-w-[760px] h-[300px] lg:h-[340px] xl:h-[380px] items-center justify-center">
         <button
           onClick={prev}
@@ -115,8 +115,8 @@ export default function VideoSlider() {
             transform: animating ? "scale(0.97)" : "scale(1)",
           }}
         >
-          {/* Left side image — 75% of center */}
-          <div className="absolute top-1/2 -translate-y-1/2 z-[1] left-[10%] lg:left-[11%] xl:left-[12%]">
+          {/* Left side */}
+          <div className="absolute top-1/2 -translate-y-1/2 z-1 left-[10%] lg:left-[11%] xl:left-[12%]">
             <img
               src={leftSlide.src}
               alt={leftSlide.alt}
@@ -125,8 +125,8 @@ export default function VideoSlider() {
             />
           </div>
 
-          {/* Center image + play/pause overlay */}
-          <div className="relative z-[2] flex items-center justify-center">
+          {/* Center  */}
+          <div className="relative z-2 flex items-center justify-center">
             <img
               src={centerSlide.src}
               alt={centerSlide.alt}
@@ -142,7 +142,7 @@ export default function VideoSlider() {
             </button>
           </div>
 
-          {/* Right side image — 75% of center */}
+          {/* Right side */}
           <div className="absolute top-1/2 -translate-y-1/2 z-[1] right-[10%] lg:right-[11%] xl:right-[12%]">
             <img
               src={rightSlide.src}
