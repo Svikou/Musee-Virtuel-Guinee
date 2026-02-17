@@ -4,7 +4,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Info from "../components/Info";
 import Tabs from "../components/Tabs";
-import SliderProfiles from "../components/SliderProfiles";
 import AudioPlayer from "../components/Audioplayer";
 import GalerieImages from "../components/GalerieImages";
 import VideoPlayer from "../components/VideoPlayer";
@@ -60,11 +59,6 @@ export default function Home() {
               {renderContent()}
 
               {/* SliderProfiles - Desktop seulement */}
-              {activeTab === "recits" && (
-                <div className="-mt-10 hidden md:block">
-                  <SliderProfiles />
-                </div>
-              )}
             </div>
           </div>
         </main>
