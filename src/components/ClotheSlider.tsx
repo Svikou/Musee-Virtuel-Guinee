@@ -15,7 +15,7 @@ const slides = [
     id: 2,
     title: "Kalimba",
     subtitle: "Resonant tones of the African mbira",
-    src: "/FemmePerso",
+    src: "/FemmePerso.png",
     alt: "Kalimba instrument",
   },
   {
@@ -120,7 +120,7 @@ export default function ClotheSlider() {
             <img
               src={centerSlide.src}
               alt={centerSlide.alt}
-              className="object-contain h-[200px] lg:h-[240px] xl:h-[280px]"
+              className="object-contain h-[200px] lg:h-[240px] xl:h-[290px]"
               style={{ filter: "drop-shadow(0 12px 32px rgba(0,0,0,0.22))" }}
             />
           </div>
@@ -147,7 +147,7 @@ export default function ClotheSlider() {
 
       {/* Description */}
       <div
-        className="text-center  transition-opacity duration-300"
+        className="-mt-10 text-center transition-opacity duration-300"
         style={{ opacity: animating ? 0 : 1 }}
       >
         <h1

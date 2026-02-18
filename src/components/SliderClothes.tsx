@@ -1,39 +1,25 @@
 "use client";
 
-import React from "react";
-
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 
 interface Profile {
   id: number;
-
   image: string;
 }
 
 const profiles: Profile[] = [
-  {
-    id: 1,
-    image: "/Homme-mini.png",
-  },
-  {
-    id: 2,
-    image: "/Femme-mini.png",
-  },
-  {
-    id: 3,
-    image: "/Vieux-mini.png",
-  },
-  {
-    id: 4,
-    image: "/Vieille-mini.png",
-  },
+  { id: 1, image: "/Homme-mini.png" },
+  { id: 2, image: "/Femme-mini.png" },
+  { id: 3, image: "/Vieux-mini.png" },
+  { id: 4, image: "/Vieille-mini.png" },
 ];
 
-export default function SliderClothes() {
+export default function SliderImages() {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [activeId, setActiveId] = useState<number>(1);
 
   const handleMouseDown = (e: React.MouseEvent) => {
     if (!containerRef.current) return;
@@ -42,9 +28,7 @@ export default function SliderClothes() {
     setScrollLeft(containerRef.current.scrollLeft);
   };
 
-  const handleMouseUp = () => {
-    setIsDragging(false);
-  };
+  const handleMouseUp = () => setIsDragging(false);
 
   const handleMouseMove = (e: React.MouseEvent) => {
     if (!isDragging || !containerRef.current) return;
@@ -69,8 +53,8 @@ export default function SliderClothes() {
   };
 
   return (
-    <div className=" flex items-center justify-center">
-      <div className="bg-[#785e4784] backdrop-blur-3xl rounded-[100px] py-4 pl-12  w-fit border-[3px] border-white/30 overflow-hidden">
+    <div className="flex items-center justify-center">
+      <div className="bg-[#785e4784] backdrop-blur-3xl rounded-[100px] py-3 px-10 w-fit border-[3px] border-white/30 overflow-hidden">
         <div
           ref={containerRef}
           onMouseDown={handleMouseDown}
@@ -80,25 +64,31 @@ export default function SliderClothes() {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleMouseUp}
           onTouchMove={handleTouchMove}
-          className={`flex gap-3 overflow-x-hidden scroll-smooth select-none pr-10 scrollbar-hide ${
+          className={`flex gap-3 overflow-x-hidden scroll-smooth select-none scrollbar-hide ${
             isDragging ? "cursor-grabbing" : "cursor-grab"
           }`}
         >
-          {profiles.map((profile) => (
-            <div
-              key={profile.id}
-              className="flex items-center gap-3 bg-[#DACFC1]  backdrop-blur-lg rounded-lg py-4 px-8 h-20 shrink-0 w-fit"
-            >
-              <div className="h-full rounded-sm overflow-hidden shrink-0">
+          {profiles.map((profile) => {
+            const isActive = activeId === profile.id;
+            return (
+              <div
+                key={profile.id}
+                onClick={() => setActiveId(profile.id)}
+                className={`
+                  relative shrink-0 w-20 h-18 rounded-xl overflow-hidden
+                  bg-[#DACFC1] backdrop-blur-md
+                   cursor-pointer
+                  ${isActive ? "border-2 border-white" : ""}
+                `}
+              >
                 <img
-                  src={profile.image || "/placeholder.svg"}
-                  // alt={profile.name}
+                  src={profile.image}
                   draggable={false}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-3"
                 />
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </div>

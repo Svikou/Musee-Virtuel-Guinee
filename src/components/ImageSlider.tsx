@@ -147,7 +147,7 @@ export default function ImageSlider() {
 
       {/* Description */}
       <div
-        className="text-center  transition-opacity duration-300"
+        className="-mt-12 text-center  transition-opacity duration-300"
         style={{ opacity: animating ? 0 : 1 }}
       >
         <h1

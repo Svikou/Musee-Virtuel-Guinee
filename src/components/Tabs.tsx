@@ -31,6 +31,12 @@ const Tabs = ({ activeTab, onTabChange }: TabsProps) => {
       icon: ImageIcon,
       svgPath: "/icones/map-location.svg",
     },
+    {
+      id: "Tenues",
+      label: "Tenues",
+      icon: ImageIcon,
+      svgPath: "/icones/image-gallery.svg",
+    },
   ];
 
   return (

@@ -1,16 +1,16 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
-import Info from "@/components/Info";
 import Tabs from "@/components/Tabs";
 import AudioPlayer from "@/components/Audioplayer";
 import GalerieImages from "@/components/GalerieImages";
 import VideoPlayer from "@/components/VideoPlayer";
 import MapComponent from "@/components/MapComponent";
+import ClotheComponent from "@/components/ClotheComponent";
+import Info2 from "@/components/Info2";
 
 export default function Home() {
-  const [activeTab, setActiveTab] = useState("images");
+  const [activeTab, setActiveTab] = useState("Tenues");
 
   const renderContent = () => {
     switch (activeTab) {
@@ -22,6 +22,8 @@ export default function Home() {
         return <VideoPlayer />;
       case "carte":
         return <MapComponent />;
+      case "Tenues":
+        return <ClotheComponent />;
       default:
         return <AudioPlayer />;
     }
@@ -41,7 +43,7 @@ export default function Home() {
 
             {/* Left side */}
             <div className="w-full min-[980px]:w-auto">
-              <Info />
+              <Info2 />
             </div>
 
             {/* Right side */}
