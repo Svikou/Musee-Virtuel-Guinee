@@ -2,12 +2,12 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import Info from "../components/Info";
-import Tabs from "../components/Tabs";
-import AudioPlayer from "../components/Audioplayer";
-import GalerieImages from "../components/GalerieImages";
-import VideoPlayer from "../components/VideoPlayer";
-import MapComponent from "../components/MapComponent";
+import Info from "../../components/Info";
+import Tabs from "../../components/Tabs";
+import AudioPlayer from "../../components/Audioplayer";
+import GalerieImages from "../../components/GalerieImages";
+import VideoPlayer from "../../components/VideoPlayer";
+import MapComponent from "../../components/MapComponent";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("images");

@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header2 from "../components/Header";
-import Navigation from "../components/Navigation";
 
-const inter = Inter({
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,39 +11,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.className} antialiased relative min-h-screen  `}
-      >
-        <div className="px-8 md:px-16 lg:px-16">
-          {/* BG Img */}
-          <div
-            className="fixed inset-0 bg-repeat-y bg-top "
-            style={{
-              backgroundImage: `url('/BG_1.png')`,
-              backgroundSize: "100% auto",
-            }}
-          />
-          <div className="absolute inset-0" />
-
-          {/* Content */}
-          <div className="relative z-10">
-            {/* Header */}
-            <Header2 />
-
-            <div className=" py-2 flex items-center gap-2 text-white/80 text-sm mt-6">
-              <Navigation />
-            </div>
-
-            <div className="backdrop-blur-lg bg-black/10 rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 w-full  mx-auto my-4 sm:my-6 md:my-8 border-2 border-white/30 min-h-[60vh]">
-              {children}
-            </div>
-          </div>
-        </div>
+      <body className={`${inter.className} antialiased relative min-h-screen`}>
+        {children}
       </body>
     </html>
   );

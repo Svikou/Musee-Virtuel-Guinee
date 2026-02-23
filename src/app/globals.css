@@ -125,3 +125,6 @@
     @apply px-0;
   }
 }
+.select-custom {
+  --muted-foreground: 176 169 159;
+}

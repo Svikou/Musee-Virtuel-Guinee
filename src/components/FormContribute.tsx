@@ -23,7 +23,6 @@ export default function ObjectForm() {
         <h2 className="text-[#2d2118] font-semibold text-lg mb-4">
           Informations de l'objet
         </h2>
-
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
           <div className="flex flex-col gap-1">
             <label className="text-sm text-[#2d2118]">
@@ -35,22 +34,39 @@ export default function ObjectForm() {
             />
           </div>
 
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 ">
             <label className="text-sm text-[#2d2118]">
               Catégorie <span className="text-red-500">*</span>
             </label>
             <Select>
-              <SelectTrigger className="w-full bg-white border-[#e0dbd2] rounded-lg text-sm text-[#b0a99f] focus:ring-0 focus:ring-offset-0 shadow-none">
-                <SelectValue
-                  placeholder="Sélectionnez une catégorie"
-                  className="text-[#b0a99f]"
-                />
+              <SelectTrigger className="w-full bg-white border-[#e0dbd2] rounded-lg text-sm text-[#b0a99f] focus:ring-0 focus:ring-offset-0 shadow-none  [&>span[data-placeholder]]:text-[#b0a99f]">
+                <SelectValue placeholder="Sélectionnez une catégorie" />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="instrument">Instrument</SelectItem>
-                <SelectItem value="textile">Textile</SelectItem>
-                <SelectItem value="sculpture">Sculpture</SelectItem>
-                <SelectItem value="peinture">Peinture</SelectItem>
+              <SelectContent className="bg-[#4e3b2d] border-white/20 text-white">
+                <SelectItem
+                  className="text-white hover:bg-[#6b4f3d] hover:text-white focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
+                  value="toutes"
+                >
+                  Toutes
+                </SelectItem>
+                <SelectItem
+                  className="text-white hover:bg-[#6b4f3d] hover:text-white focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
+                  value="inde"
+                >
+                  Inde
+                </SelectItem>
+                <SelectItem
+                  className="text-white hover:bg-[#6b4f3d] hover:text-white focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
+                  value="nepal"
+                >
+                  Népal
+                </SelectItem>
+                <SelectItem
+                  className="text-white hover:bg-[#6b4f3d] hover:text-white focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
+                  value="japon"
+                >
+                  Japon
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
@@ -66,11 +82,31 @@ export default function ObjectForm() {
                   className="text-[#b0a99f]"
                 />
               </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="afrique">Afrique</SelectItem>
-                <SelectItem value="asie">Asie</SelectItem>
-                <SelectItem value="europe">Europe</SelectItem>
-                <SelectItem value="amerique">Amérique</SelectItem>
+              <SelectContent className="bg-[#4e3b2d] border-white/20 text-white">
+                <SelectItem
+                  className="text-white hover:bg-[#6b4f3d] hover:text-white focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
+                  value="toutes"
+                >
+                  Toutes
+                </SelectItem>
+                <SelectItem
+                  className="text-white hover:bg-[#6b4f3d] hover:text-white focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
+                  value="inde"
+                >
+                  Inde
+                </SelectItem>
+                <SelectItem
+                  className="text-white hover:bg-[#6b4f3d] hover:text-white focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
+                  value="nepal"
+                >
+                  Népal
+                </SelectItem>
+                <SelectItem
+                  className="text-white hover:bg-[#6b4f3d] hover:text-white focus:bg-[#6b4f3d] focus:text-white cursor-pointer"
+                  value="japon"
+                >
+                  Japon
+                </SelectItem>
               </SelectContent>
             </Select>
           </div>
