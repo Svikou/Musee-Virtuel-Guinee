@@ -61,7 +61,7 @@ export default function LoginPage() {
               />
               <p className="text-right text-xs text-[#404040] mt-5">
                 <a
-                  href="/login"
+                  href="/forgot-password"
                   className="font-medium text-[#2c1a0e] underline"
                 >
                   Forgot password?

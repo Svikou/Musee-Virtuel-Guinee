@@ -14,8 +14,8 @@ export default function AuthLayout({
               backgroundSize: "100% auto",
             }}
           />
-          <div className="relative z-10">
-            <div className="backdrop-blur-lg bg-black/10 rounded-3xl p-4 sm:p-2 md:p-2 lg:p-2 w-full mx-auto my-4 sm:my-6 md:my-8 border-2 border-white/30 min-h-[60vh]">
+          <div className="relative z-10 min-h-screen flex items-center justify-center">
+            <div className="backdrop-blur-lg bg-black/10 rounded-3xl border-2 border-white/30 px-6 py-2 w-fit">
               {children}
             </div>
           </div>
