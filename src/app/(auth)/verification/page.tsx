@@ -42,7 +42,7 @@ export default function VerificationCodePage() {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="bg-[#f0ede6] rounded-xl px-8 py-10 w-full max-w-lg shadow-sm flex flex-col gap-12">
+      <div className="bg-[#f0ede6] rounded-xl px-8 py-10 w-full max-w-lg shadow-sm flex flex-col my-6 mx-2 gap-8">
         {/* T + D */}
         <div className="flex flex-col gap-4 text-center mb-6">
           <h1 className="text-4xl font-bold text-[#3b2a1a]">
@@ -69,7 +69,7 @@ export default function VerificationCodePage() {
               value={digit}
               onChange={(e) => handleChange(i, e.target.value)}
               onKeyDown={(e) => handleKeyDown(i, e)}
-              className="w-14 h-14 rounded-lg bg-white border-none text-center text-2xl font-bold text-[#3b2a1a] outline-none shadow-sm focus:ring-2 focus:ring-[#3b2a1a]/20"
+              className="w-12 h-12 rounded-md bg-white border-none text-center text-2xl font-bold text-[#3b2a1a] outline-none shadow-sm focus:ring-2 focus:ring-[#3b2a1a]/20"
             />
           ))}
         </div>
@@ -83,7 +83,7 @@ export default function VerificationCodePage() {
         {/* Bouton */}
         <Link
           href="/reset-password"
-          className="w-full bg-[#3D2B1F] hover:bg-[#4a3528] text-white rounded-full py-4 font-medium text-center text-base transition"
+          className="w-full bg-[#3D2B1F] hover:bg-[#4a3528] text-white rounded-full py-4 font-medium text-center text-base transition cursor-pointer"
         >
           Next
         </Link>
