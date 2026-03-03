@@ -101,7 +101,7 @@ const Header = () => {
           {/* Button Login */}
           <button className="bg-[#3D2B1F] hover:bg-[#4a3528] text-white rounded-full  py-3 px-4 flex items-center gap-3 shrink-0 transition-all group/btn">
             <Link
-              href="/signup"
+              href="/login"
               className="text-sm font-medium whitespace-nowrap"
             >
               Connection

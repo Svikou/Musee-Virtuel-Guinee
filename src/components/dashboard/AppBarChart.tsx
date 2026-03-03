@@ -2,7 +2,6 @@
 import {
   ChartContainer,
   ChartLegend,
-  ChartLegendContent,
   ChartTooltip,
   ChartTooltipContent,
   type ChartConfig,
@@ -51,10 +50,7 @@ const AppBarChart = () => {
             tick={{ fill: "white" }}
           />
           <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-          <ChartLegend
-            content={<ChartLegendContent />}
-            className="text-white"
-          />
+          <ChartLegend className="text-white" />
           <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />
           <Bar dataKey="mobile" fill="var(--color-mobile)" radius={4} />
         </BarChart>

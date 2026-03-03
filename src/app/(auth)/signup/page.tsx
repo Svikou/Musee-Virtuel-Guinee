@@ -75,13 +75,12 @@ export default function SignupPage() {
                 onChange={handleChange}
                 className="mt-1 w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-[#2c1a0e]/20"
               />
-              <p className="text-right text-xs text-[#404040] my-2">
-                Already have an account?{" "}
+              <p className="text-right text-xs text-[#404040] mt-5">
                 <a
-                  href="/login"
+                  href="/forgot-password"
                   className="font-medium text-[#2c1a0e] underline"
                 >
-                  Login
+                  Forgot password?
                 </a>
               </p>
             </div>
