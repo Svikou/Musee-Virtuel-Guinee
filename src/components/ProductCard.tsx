@@ -19,16 +19,16 @@ export default function ProductCard({
   slug,
 }: ProductCardProps) {
   return (
-    <div className="group bg-[#B3A696] backdrop-blur-sm rounded-xl border border-white/50 overflow-hidden transition-all  w-full sm:w-[210px] md:w-[240px] lg:w-[246px] xl:w-[243px]">
+    <div className="group bg-[#B3A696] backdrop-blur-sm rounded-xl border border-white/50 overflow-hidden transition-all w-80 sm:w-[280px] md:w-[250px] lg:w-[246px] xl:w-[264px]">
       {/* Img Container */}
-      <div className=" py-4 flex items-center justify-center ">
-        <div className="relative w-full h-full flex items-center justify-center">
+      <div className=" py-1 flex items-center justify-center ">
+        <div className="m-3 py-4 rounded-sm bg-white relative w-full h-full flex items-center justify-center transition-transform group-hover:scale-102">
           <Image
             src={image}
             alt={title}
             width={220}
             height={220}
-            className="object-contain rounded-sm max-h-full transition-transform group-hover:scale-102"
+            className="object-contain max-h-full "
           />
         </div>
       </div>

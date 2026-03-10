@@ -13,7 +13,7 @@ const page = () => {
       <div>
         <SearchBar />
       </div>
-      <div className="px-2">
+      <div className="px-2 justify-center">
         <ProductGrid />
       </div>
     </div>

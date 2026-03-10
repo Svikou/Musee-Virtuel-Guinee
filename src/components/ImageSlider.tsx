@@ -65,7 +65,7 @@ export default function ImageSlider() {
         </button>
 
         <div
-          className="flex-1 flex items-center justify-center transition-all duration-300 ease-in-out"
+          className="flex-1 flex items-center justify-center transition-all duration-300 ease-in-out "
           style={{
             opacity: animating ? 0 : 1,
             transform: animating ? "scale(0.97)" : "scale(1)",
@@ -147,7 +147,7 @@ export default function ImageSlider() {
 
       {/* Description */}
       <div
-        className="-mt-12 text-center  transition-opacity duration-300"
+        className="hidden sm:block -mt-12 text-center  transition-opacity duration-300"
         style={{ opacity: animating ? 0 : 1 }}
       >
         <h1

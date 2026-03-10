@@ -75,7 +75,7 @@ export default function SliderImages() {
                 key={profile.id}
                 onClick={() => setActiveId(profile.id)}
                 className={`
-                  relative shrink-0 w-20 h-18 rounded-xl overflow-hidden
+                  relative shrink-0 w-15 h-15 md:w-16 md:h-16 lg:w-16 lg:h-16 xl:w-18 xl:h-18 rounded-xl overflow-hidden
                   bg-[#DACFC1] backdrop-blur-md
                    cursor-pointer
                   ${isActive ? "border-2 border-white" : ""}

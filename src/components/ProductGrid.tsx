@@ -75,7 +75,7 @@ export default function ProductGrid({
   return (
     <div className="w-full  py-8">
       {/* Grid Container */}
-      <div className="flex flex-wrap gap-4 md:gap-10 lg:gap-4 xl:gap-4 justify-start">
+      <div className="flex flex-wrap gap-4 md:gap-4 lg:gap-4 xl:gap-6 justify-center lg:justify-start">
         {products.map((product) => (
           <ProductCard
             key={product.id}

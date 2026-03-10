@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="px-8 md:px-16 lg:px-16">
+    <div className="px-8 md:px-16 lg:px-16 max-w-[1400px] mx-auto">
       {/* BG Img */}
       <div
         className="fixed inset-0 bg-repeat-y bg-top "
@@ -39,7 +39,7 @@ export default function RootLayout({
           <Navigation />
         </div>
 
-        <div className="backdrop-blur-lg bg-black/10 rounded-3xl p-4 sm:p-6 md:p-8 lg:p-8 xl:p-10 2xl:p-12 w-full  mx-auto my-4 sm:my-6 md:my-8 border-2 border-white/30 min-h-[60vh]">
+        <div className="backdrop-blur-lg bg-black/10 rounded-3xl p-4 sm:p-6 md:p-8 lg:p-8 xl:p-10 2xl:p-12 w-full my-4 sm:my-6 md:my-8 border-2 border-white/30 min-h-[60vh] max-w-[1400px] mx-auto">
           {children}
         </div>
       </div>
